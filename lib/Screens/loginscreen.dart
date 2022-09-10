@@ -1,7 +1,7 @@
-import 'package:final_year_project_rider_app/Screens/RegistrationScreen.dart';
-import 'package:final_year_project_rider_app/Screens/mainscreen.dart';
-import 'package:final_year_project_rider_app/Widgets/progressDialog.dart';
-import 'package:final_year_project_rider_app/main.dart';
+import 'package:fiacre_driver_app/Screens/RegistrationScreen.dart';
+import 'package:fiacre_driver_app/Screens/mainscreen.dart';
+import 'package:fiacre_driver_app/Widgets/progressDialog.dart';
+import 'package:fiacre_driver_app/main.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                 height: 1.0,
               ),
               Text(
-                "Login as a Rider",
+                "Login as a Driver",
                 style: TextStyle(fontSize: 25.0, fontFamily: "Brand Bold"),
                 textAlign: TextAlign.left,
               ),

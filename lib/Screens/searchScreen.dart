@@ -1,10 +1,10 @@
-import 'package:final_year_project_rider_app/Assistants/request_assistant.dart';
-import 'package:final_year_project_rider_app/DataHandler/Models/address.dart';
-import 'package:final_year_project_rider_app/DataHandler/Models/placePredictions.dart';
-import 'package:final_year_project_rider_app/DataHandler/appData.dart';
-import 'package:final_year_project_rider_app/Widgets/divider.dart';
-import 'package:final_year_project_rider_app/Widgets/progressDialog.dart';
-import 'package:final_year_project_rider_app/configMaps.dart';
+import 'package:fiacre_driver_app/Assistants/request_assistant.dart';
+import 'package:fiacre_driver_app/DataHandler/Models/address.dart';
+import 'package:fiacre_driver_app/DataHandler/Models/placePredictions.dart';
+import 'package:fiacre_driver_app/DataHandler/appData.dart';
+import 'package:fiacre_driver_app/Widgets/divider.dart';
+import 'package:fiacre_driver_app/Widgets/progressDialog.dart';
+import 'package:fiacre_driver_app/configMaps.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

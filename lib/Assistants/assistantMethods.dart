@@ -1,8 +1,8 @@
-import 'package:final_year_project_rider_app/Assistants/request_assistant.dart';
-import 'package:final_year_project_rider_app/DataHandler/Models/address.dart';
-import 'package:final_year_project_rider_app/DataHandler/Models/directionDetails.dart';
-import 'package:final_year_project_rider_app/DataHandler/appData.dart';
-import 'package:final_year_project_rider_app/configMaps.dart';
+import 'package:fiacre_driver_app/Assistants/request_assistant.dart';
+import 'package:fiacre_driver_app/DataHandler/Models/address.dart';
+import 'package:fiacre_driver_app/DataHandler/Models/directionDetails.dart';
+import 'package:fiacre_driver_app/DataHandler/appData.dart';
+import 'package:fiacre_driver_app/configMaps.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:geolocator/geolocator.dart';

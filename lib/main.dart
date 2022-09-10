@@ -1,7 +1,7 @@
-import 'package:final_year_project_rider_app/DataHandler/appData.dart';
-import 'package:final_year_project_rider_app/Screens/loginscreen.dart';
-import 'package:final_year_project_rider_app/Screens/mainscreen.dart';
-import 'package:final_year_project_rider_app/Screens/registrationscreen.dart';
+import 'package:fiacre_driver_app/DataHandler/appData.dart';
+import 'package:fiacre_driver_app/Screens/loginscreen.dart';
+import 'package:fiacre_driver_app/Screens/mainscreen.dart';
+import 'package:fiacre_driver_app/Screens/registrationscreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => AppData(),
       child: MaterialApp(
-        title: 'Fiacre Rider App',
+        title: 'Fiacre Driver App',
         theme: ThemeData(
           fontFamily: "Border Bold",
           primarySwatch: Colors.blueGrey,

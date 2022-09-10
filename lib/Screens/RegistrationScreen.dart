@@ -1,5 +1,5 @@
-import 'package:final_year_project_rider_app/Screens/loginscreen.dart';
-import 'package:final_year_project_rider_app/Screens/mainscreen.dart';
+import 'package:fiacre_driver_app/Screens/loginscreen.dart';
+import 'package:fiacre_driver_app/Screens/mainscreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +34,7 @@ class RegistrationScreenn extends StatelessWidget {
                 height: 1.0,
               ),
               Text(
-                "Sign Up as a Rider",
+                "Sign Up as a Driver",
                 style: TextStyle(fontSize: 25.0, fontFamily: "Brand Bold"),
                 textAlign: TextAlign.left,
               ),
