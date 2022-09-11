@@ -1,5 +1,7 @@
+import 'package:fiacre_driver_app/Screens/carDetailsScreen.dart';
 import 'package:fiacre_driver_app/Screens/loginscreen.dart';
 import 'package:fiacre_driver_app/Screens/mainscreen.dart';
+import 'package:fiacre_driver_app/configMaps.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -198,10 +200,11 @@ class RegistrationScreenn extends StatelessWidget {
         "phone": phoneTextEditingController.text.trim(),
         "password": passwordTextEditingController.text,
       };
-      usersRef.child(firebaseUser.uid).set(userDataMap);
+      driversRef.child(firebaseUser.uid).set(userDataMap);
+
+      currentfirebaseUser = firebaseUser;
       displayToastMessage("You account was Successfully created", context);
-      Navigator.pushNamedAndRemoveUntil(
-          context, MainScreen.idScreen, (route) => false);
+      Navigator.pushNamed(context, carDetailsSCreen.idScreen);
     } else {
       Navigator.pop(context);
       displayToastMessage("New User Account has not been Created", context);

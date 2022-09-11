@@ -1,7 +1,8 @@
 import 'package:fiacre_driver_app/DataHandler/appData.dart';
+import 'package:fiacre_driver_app/Screens/RegistrationScreen.dart';
+import 'package:fiacre_driver_app/Screens/carDetailsScreen.dart';
 import 'package:fiacre_driver_app/Screens/loginscreen.dart';
 import 'package:fiacre_driver_app/Screens/mainscreen.dart';
-import 'package:fiacre_driver_app/Screens/registrationscreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -16,6 +17,8 @@ void main() async {
 
 DatabaseReference usersRef =
     FirebaseDatabase.instance.reference().child("users");
+DatabaseReference driversRef =
+    FirebaseDatabase.instance.reference().child("drivers");
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -32,13 +35,12 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blueGrey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        initialRoute: FirebaseAuth.instance.currentUser == null
-            ? LoginScreen.idScreen
-            : MainScreen.idScreen,
+        initialRoute: RegistrationScreenn.idScreen,
         routes: {
           RegistrationScreenn.idScreen: (context) => RegistrationScreenn(),
           LoginScreen.idScreen: (context) => LoginScreen(),
           MainScreen.idScreen: (context) => MainScreen(),
+          carDetailsSCreen.idScreen: (context) => carDetailsSCreen(),
         },
         debugShowCheckedModeBanner: false,
       ),
