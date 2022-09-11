@@ -140,6 +140,6 @@ class carDetailsSCreen extends StatelessWidget {
 
     driversRef.child(userId).child("car_details").set(carInfoMap);
     Navigator.pushNamedAndRemoveUntil(
-        context, MainScreen.idScreen, (route) => false);
+        context, MainScreen.idscreen, (route) => false);
   }
 }

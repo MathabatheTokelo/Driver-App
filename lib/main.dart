@@ -35,11 +35,11 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blueGrey,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        initialRoute: RegistrationScreenn.idScreen,
+        initialRoute: MainScreen.idscreen,
         routes: {
           RegistrationScreenn.idScreen: (context) => RegistrationScreenn(),
           LoginScreen.idScreen: (context) => LoginScreen(),
-          MainScreen.idScreen: (context) => MainScreen(),
+          MainScreen.idscreen: (context) => MainScreen(),
           carDetailsSCreen.idScreen: (context) => carDetailsSCreen(),
         },
         debugShowCheckedModeBanner: false,
