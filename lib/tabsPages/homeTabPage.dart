@@ -48,6 +48,51 @@ class HomeTabPage extends StatelessWidget {
             locatePosition();
           },
         ),
+
+        //Online-offline container
+        Container(
+          height: 140,
+          width: double.infinity,
+          color: Colors.black54,
+        ),
+
+        Positioned(
+          top: 60.0,
+          left: 0.0,
+          right: 0.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                child: RaisedButton(
+                  onPressed: () {},
+                  color: Theme.of(context).accentColor,
+                  child: Padding(
+                    padding: EdgeInsets.all(17.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Online",
+                          style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        Icon(
+                          Icons.phone_android,
+                          color: Colors.white,
+                          size: 26.0,
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
