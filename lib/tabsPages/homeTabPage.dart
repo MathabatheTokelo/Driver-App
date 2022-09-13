@@ -71,6 +71,7 @@ class HomeTabPage extends StatelessWidget {
                 child: RaisedButton(
                   onPressed: () {
                     makeDriverOnlineNow();
+                    getLocationLiveUpdates();
                   },
                   color: Theme.of(context).accentColor,
                   child: Padding(
@@ -102,10 +103,24 @@ class HomeTabPage extends StatelessWidget {
     );
   }
 
-  void makeDriverOnlineNow() {
+  void makeDriverOnlineNow() async {
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+    currentPosition = position;
     Geofire.initialize("availableDrivers");
     Geofire.setLocation(currentfirebaseUser!.uid, currentPosition.latitude,
         currentPosition.longitude);
     rideRequestRef.onValue.listen((event) {});
+  }
+
+  void getLocationLiveUpdates() {
+    homeTabPageStreamSubscription =
+        Geolocator.getPositionStream().listen((Position position) {
+      currentPosition = position;
+      Geofire.setLocation(
+          currentfirebaseUser!.uid, position.latitude, position.longitude);
+      LatLng latLng = LatLng(position.latitude, position.longitude);
+      newGoogleMapController.animateCamera(CameraUpdate.newLatLng(latLng));
+    });
   }
 }

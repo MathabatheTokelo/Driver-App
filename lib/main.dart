@@ -13,6 +13,8 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
+  currentfirebaseUser = FirebaseAuth.instance.currentUser;
   runApp(const MyApp());
 }
 
