@@ -22,7 +22,7 @@ DatabaseReference usersRef =
     FirebaseDatabase.instance.reference().child("users");
 DatabaseReference driversRef =
     FirebaseDatabase.instance.reference().child("drivers");
-DatabaseReference rideRequestRef = FirebaseDatabase.instance
+DatabaseReference? rideRequestRef = FirebaseDatabase.instance
     .reference()
     .child("drivers")
     .child(currentfirebaseUser!.uid)
