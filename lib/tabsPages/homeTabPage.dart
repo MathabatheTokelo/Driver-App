@@ -1,6 +1,9 @@
 import 'dart:async';
 
+import 'package:fiacre_driver_app/configMaps.dart';
+import 'package:fiacre_driver_app/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -66,7 +69,9 @@ class HomeTabPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    makeDriverOnlineNow();
+                  },
                   color: Theme.of(context).accentColor,
                   child: Padding(
                     padding: EdgeInsets.all(17.0),
@@ -74,7 +79,7 @@ class HomeTabPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Online",
+                          "Offline - Go Online",
                           style: TextStyle(
                               fontSize: 20.0,
                               fontWeight: FontWeight.bold,
@@ -95,5 +100,12 @@ class HomeTabPage extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  void makeDriverOnlineNow() {
+    Geofire.initialize("availableDrivers");
+    Geofire.setLocation(currentfirebaseUser!.uid, currentPosition.latitude,
+        currentPosition.longitude);
+    rideRequestRef.onValue.listen((event) {});
   }
 }
