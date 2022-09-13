@@ -151,7 +151,7 @@ class LoginScreen extends StatelessWidget {
     if (firebaseUser != null) {
       //check user from database
       //remove value
-      usersRef.child(firebaseUser.uid).once().then((DatabaseEvent snap) {
+      driversRef.child(firebaseUser.uid).once().then((DatabaseEvent snap) {
         if (snap.snapshot != null) {
           Navigator.pushNamedAndRemoveUntil(
               context, MainScreen.idscreen, (route) => false);
