@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class HomeTabPage extends StatefulWidget {
   static final CameraPosition _kGooglePlex = CameraPosition(
@@ -59,7 +60,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
           myLocationEnabled: true,
           zoomGesturesEnabled: true,
           zoomControlsEnabled: true,
-          onMapCreated: (GoogleMapController controller) {
+          onMapCreated: (GoogleMapController controller) async {
             _controllerGoogleMap.complete(controller);
             newGoogleMapController = controller;
             //Black themed Google Maps
@@ -227,7 +228,16 @@ class _HomeTabPageState extends State<HomeTabPage> {
                     ]
                 ''');
 
-            locatePosition();
+            var LocationStatus = await Permission.location.status;
+
+            if (!LocationStatus.isGranted) {
+              await Permission.location.request();
+            }
+            if (await Permission.location.isGranted) {
+              locatePosition();
+            } else {
+              displayToastMessage("Turn On Location", context);
+            }
           },
         ),
 
