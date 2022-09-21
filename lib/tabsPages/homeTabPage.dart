@@ -243,7 +243,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
         //Online-offline container
         Container(
-          height: 140,
+          height: 0,
           width: double.infinity,
           color: Colors.black54,
         ),
@@ -264,7 +264,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                       getLocationLiveUpdates();
                       setState(() {
                         driverStatusColour = Colors.green;
-                        driverStatusText = "Online";
+                        driverStatusText = " ";
                         isDriverAvailable = true;
                       });
                       displayToastMessage("you are Online", context);
@@ -279,7 +279,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                   },
                   color: driverStatusColour,
                   child: Padding(
-                    padding: EdgeInsets.all(17.0),
+                    padding: EdgeInsets.all(13.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -291,7 +291,7 @@ class _HomeTabPageState extends State<HomeTabPage> {
                               color: Colors.white),
                         ),
                         Icon(
-                          Icons.phone_android,
+                          Icons.phone_disabled,
                           color: Colors.white,
                           size: 26.0,
                         )
