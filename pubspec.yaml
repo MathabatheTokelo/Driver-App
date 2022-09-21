@@ -82,6 +82,7 @@ flutter:
      - images/redmarker.png
      - images/taxi.png
      - images/user_icon.png
+     - images/me.JPEG
 
   # To add assets to your application, add an assets section, like this:
   # assets:
