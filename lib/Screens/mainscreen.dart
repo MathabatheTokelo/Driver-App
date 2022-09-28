@@ -51,21 +51,34 @@ class _MainScreenState extends State<MainScreen>
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.white,
+            ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.credit_card),
+            icon: Icon(
+              Icons.credit_card,
+              color: Colors.white,
+            ),
             label: "Earnings",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Icon(
+              Icons.star,
+              color: Colors.white,
+            ),
             label: "Ratings",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(
+              Icons.person,
+              color: Colors.white,
+            ),
             label: "Profile",
           ),
         ],

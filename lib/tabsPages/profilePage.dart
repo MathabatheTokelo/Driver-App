@@ -286,7 +286,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
             children: <Widget>[
               ClipOval(
                 child: Image.asset(
-                  "images//me.JPEG",
+                  "images/me.JPEG",
                   width: 100,
                   height: 100,
                   fit: BoxFit.cover,
