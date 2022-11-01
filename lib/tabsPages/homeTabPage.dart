@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:fiacre_driver_app/Notifications/pushNotificationService.dart';
 import 'package:fiacre_driver_app/Screens/RegistrationScreen.dart';
 import 'package:fiacre_driver_app/configMaps.dart';
 import 'package:fiacre_driver_app/main.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_geofire/flutter_geofire.dart';
 import 'package:geolocator/geolocator.dart';
@@ -34,6 +36,12 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
   bool isDriverAvailable = false;
 
+  @override
+  void initState() {
+    super.initState();
+    getCurrentDriverInfo();
+  }
+
   void locatePosition() async {
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
@@ -47,6 +55,13 @@ class _HomeTabPageState extends State<HomeTabPage> {
 
     //String address = await AssistantMethods.searchCoordinateAddress(position, context);
     //print("This is your Address :: " + address);
+  }
+
+  void getCurrentDriverInfo() async {
+    currentfirebaseUser = await FirebaseAuth.instance.currentUser;
+    PushNotificationService pushNotificationService = PushNotificationService();
+    pushNotificationService.initialize();
+    pushNotificationService.getToken();
   }
 
   @override

@@ -8,7 +8,7 @@ class RatingTabPage extends StatefulWidget {
 }
 
 class _RatingTabPageState extends State<RatingTabPage> {
-  double rating = 3.5;
+  double rating = 4.5;
 
   @override
   Widget build(BuildContext context) {
@@ -39,16 +39,19 @@ class StarRating extends StatelessWidget {
     if (index >= rating) {
       icon = new Icon(
         Icons.star_border,
+        size: 70,
         color: Theme.of(context).buttonColor,
       );
     } else if (index > rating - 1 && index < rating) {
       icon = new Icon(
         Icons.star_half,
+        size: 70,
         color: color ?? Theme.of(context).primaryColor,
       );
     } else {
       icon = new Icon(
         Icons.star,
+        size: 70,
         color: color ?? Theme.of(context).primaryColor,
       );
     }
