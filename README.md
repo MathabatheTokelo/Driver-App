@@ -1,6 +1,34 @@
-# fiacre_driver_app
+# **Fiacre Driver App**
+Fiacre is a simple e-hailing platform which connects riders and drivers, at a more affordable rate than the regular taxicab. In this case we will be looking at the Dridvrs side of things (click [Fiacre Rider App](https://github.com/MathabatheTokelo/Rider-App.git) to check out the drivers side).
 
-A new Flutter project.
+Star⭐ the repo if you like what you see😉.
+
+
+
+
+## **📸 ✨ Requirements**
+-----
+
+- Any Operating System (ie. MacOS X, Linux, Windows)
+- Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
+- A little knowledge of Dart and Flutter
+
+
+## **📸 ScreenShots**
+-----
+![Login Screen ](https://github.com/MathabatheTokelo/Driver-App/blob/main/samples/1.png)
+
+
+
+![Registration Screen](https://github.com/MathabatheTokelo/Driver-App/blob/main/samples/2.png)
+
+
+![Main Screen](https://github.com/MathabatheTokelo/Driver-App/blob/main/samples/3.png)
+
+
+![]()
+
+.
 
 ## Getting Started
 
